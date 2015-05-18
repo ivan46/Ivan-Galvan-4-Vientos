@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @author Iván Galván
+ * @author Iván Galván.
  *
  */
 public class SubjectTest {
