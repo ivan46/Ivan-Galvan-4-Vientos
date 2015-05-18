@@ -11,18 +11,18 @@ import java.util.Random;
  */
 public class craps {
 
-	double money; // player money
-	double pbet; // players last bet
-	double betz; // total bets
-	Random rndom = new Random();
+	public double money; // player money
+	private double pbet; // players last bet
+	private double betz; // total bets
+	Random random = new Random();
 	int d1, d2;
 	
 	/**
 	 * constructor, player begins with initial money
-	 * @param mymoney
+	 * @param money
 	 */
-	public craps (double mymoney) {
-		money = mymoney;
+	public craps (double money) {
+		this.money = money;
 	}
 	
 	/**
@@ -30,15 +30,15 @@ public class craps {
 	 */
 	public void putb (double plbet) {
 		pbet = plbet;
-		betz = pbet + rndom.nextInt(100);
+		betz = pbet + random.nextInt(100);
 	}
 	
 	/**
 	 * rolling two 6D dices...
 	 */
 	public void roll () {
-		d1 = rndom.nextInt(6);
-		d2 = rndom.nextInt(6);
+		d1 = random.nextInt(6);
+		d2 = random.nextInt(6);
 	}
 	
 	/**

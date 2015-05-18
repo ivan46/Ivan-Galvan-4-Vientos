@@ -1,24 +1,26 @@
-package org.cuatrovientos.fartura;
+package org.cuatrovientos.factura;
 
 /**
  * Clase para hacer facturas y aplicar iva
  * @author Programador Bajeril
  *
  */
-public class fartura {
-	double tot;
-	double subtot;
+public class Factura {
+	private double total;
+	private double subtotal;
 	
-	public fartura (double stota) {
-		subtot = stota;
+	
+	public Factura (double subtotal) {
+		this.subtotal = subtotal;
 	}
+	
 	
 	/**
 	 *  le aplica al total el iva reducido
 	 *  y se guarda en el total
 	 */
-	public void ivaredu () {
-		tot = subtot + (subtot * 0.21d);
+	public void ivareducido () {
+		total = subtotal + (subtotal * 0.21d);
 	}
 
 	/**
@@ -26,15 +28,15 @@ public class fartura {
 	 *  y se guarda en el total
 	 */
 	public void iva () {
-		tot = subtot + (subtot * 0.04d);		
+		total = subtotal + (subtotal * 0.04d);		
 	}
 	
 	/**
 	 * le aplica un descuento especial fijo
 	 * que se aplica a clientes VIP
 	 */
-	public void descuentoesp () {
-		tot = subtot - (subtot * 0.10d);
+	public void descuentoespecial () {
+		total = subtotal - (subtotal * 0.10d);
 	}
 
 }
