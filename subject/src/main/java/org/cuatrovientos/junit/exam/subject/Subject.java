@@ -5,7 +5,7 @@ package org.cuatrovientos.junit.exam.subject;
 
 /**
  * Simple class representing a subject from school
- * @author Iván Galvan
+ * @author Iván Galvan.
  *
  */
 public class Subject {
